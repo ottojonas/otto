@@ -20,11 +20,16 @@
     <section class="about">
       <h1>About Me</h1>
       <div class="about-content">
-        <img src="assets/jordan.jpg" alt="ottojonas" class="profile-pic" />
+        <img
+          src="/public/assets/jordan.jpg"
+          alt="ottojonas"
+          class="profile-pic"
+        />
         <p id="bio"></p>
       </div>
     </section>
     <script>
+      const welcomeMessage = "Welcome to my portfolio:)\n\n";
       const asciiArt = `
        ██████╗ ████████╗████████╗ ██████╗ 
       ██╔═══██╗╚══██╔══╝╚══██╔══╝██╔═══██╗
@@ -34,19 +39,20 @@
        ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ 
       `;
 
+      const fullText = welcomeMessage + asciiArt;
       let i = 0;
-      function typeASCII() {
-        if (i < asciiArt.length) {
+      function typeFullText() {
+        if (i < fullText.length) {
           document.getElementById("ascii-output").textContent +=
-            asciiArt.charAt(i);
+            fullText.charAt(i);
           i++;
-          setTimeout(typeASCII, 5); // Adjust speed here
+          setTimeout(typeFullText, 50); // Adjust speed here
         }
       }
 
       // Start animation when page loads
       document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(typeASCII, 500); // Delay start for realism
+        setTimeout(typeFullText, 500); // Delay start for realism
       });
     </script>
 

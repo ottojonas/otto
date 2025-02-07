@@ -17,7 +17,9 @@
       <a href="projects.html">Projects</a>
       <a href="config-and-equipment.html">My Config and Equipment</a>
     </nav>
-
+    <section class="projects-terminal">
+      <pre id="description"></pre>
+    </section>
     <section class="projects">
       <h1>Projects</h1>
       <div class="projects-grid">
@@ -63,5 +65,19 @@
         </div>
       </div>
     </section>
+    <script>
+      const descText = "My projects";
+
+      let b = 0;
+      function typeDesc() {
+        if (b < descText.length) {
+          document.getElementById("description").textContent +=
+            descText.charAt(b);
+          b++;
+          setTimeout(typeDesc, 50);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", typeDesc);
+    </script>
   </body>
 </html>

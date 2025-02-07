@@ -18,8 +18,11 @@
       <a href="config-and-equipment.html">My Config and Equipment</a>
     </nav>
 
+    <section class="config-terminal">
+      <pre id="welcome"></pre>
+    </section>
     <section class="projects">
-      <h1>Projects</h1>
+      <h1>Equipment and Config</h1>
       <div class="projects-grid">
         <div class="project-card">
           <h2>Repo of my equipment and configurations</h2>
@@ -32,5 +35,19 @@
         </div>
       </div>
     </section>
+    <script>
+      const configText = "My equipment and configurations";
+
+      let b = 0;
+      function typeConfText() {
+        if (b < configText.length) {
+          document.getElementById("welcome").textContent +=
+            configText.charAt(b);
+          b++;
+          setTimeout(typeConfText, 50);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", typeConfText);
+    </script>
   </body>
 </html>
