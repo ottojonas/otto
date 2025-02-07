@@ -14,6 +14,9 @@
       <a href="config-and-equipment.html">My Config and Equipment</a>
     </nav>
 
+    <section class="ascii-header">
+      <pre id="ascii-output"></pre>
+    </section>
     <section class="about">
       <h1>About Me</h1>
       <div class="about-content">
@@ -22,12 +25,39 @@
       </div>
     </section>
     <script>
-      const bioText = "Hi, I'm Otto, a software engineer.";
+      const asciiArt = `
+       ██████╗ ████████╗████████╗ ██████╗ 
+      ██╔═══██╗╚══██╔══╝╚══██╔══╝██╔═══██╗
+      ██║   ██║   ██║      ██║   ██║   ██║
+      ██║   ██║   ██║      ██║   ██║   ██║
+      ╚██████╔╝   ██║      ██║   ╚██████╔╝
+       ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ 
+      `;
+
       let i = 0;
-      function typeBio() {
-        if (i < bioText.length) {
-          document.getElementById("bio").textContent += bioText.charAt(i);
+      function typeASCII() {
+        if (i < asciiArt.length) {
+          document.getElementById("ascii-output").textContent +=
+            asciiArt.charAt(i);
           i++;
+          setTimeout(typeASCII, 5); // Adjust speed here
+        }
+      }
+
+      // Start animation when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(typeASCII, 500); // Delay start for realism
+      });
+    </script>
+
+    <script>
+      const bioText = "Hi, I'm Otto, a software engineer.";
+
+      let b = 0;
+      function typeBio() {
+        if (b < bioText.length) {
+          document.getElementById("bio").textContent += bioText.charAt(b);
+          b++;
           setTimeout(typeBio, 50);
         }
       }

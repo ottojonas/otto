@@ -180,3 +180,24 @@ p {
   margin: 20px auto;
   border: 3px solid var(--hover);
 }
+
+.ascii-header {
+  background-color: black;
+  color: #00ff00; /* Classic terminal green */
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.ascii-header pre {
+  font-family: "Fira Code", monospace; /* Use a coding font */
+  color: var(--text);
+  text-align: center;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
