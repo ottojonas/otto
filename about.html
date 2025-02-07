@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Otto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="working-on.html">Currently Working On</a>
+    </nav>
+
+    <section class="about">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <img src="assets/jordan.jpg" alt="ottojonas" class="profile-pic" />
+        <p id="bio"></p>
+      </div>
+    </section>
+    <script>
+      const bioText = "Hi, I'm Otto, a software engineer.";
+      let i = 0;
+      function typeBio() {
+        if (i < bioText.length) {
+          document.getElementById("bio").textContent += bioText.charAt(i);
+          i++;
+          setTimeout(typeBio, 50);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", typeBio);
+    </script>
+  </body>
+</html>
