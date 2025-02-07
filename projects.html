@@ -12,10 +12,13 @@
   </head>
   <body>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="projects.html">Projects</a>
-      <a href="config-and-equipment.html">My Config and Equipment</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="config-and-equipment.html">My Config and Equipment</a>
+      </div>
     </nav>
     <section class="projects-terminal">
       <pre id="description"></pre>
@@ -65,6 +68,8 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
+
     <script>
       const descText = "My projects";
 

@@ -8,10 +8,13 @@
   </head>
   <body>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="projects.html">Projects</a>
-      <a href="config-and-equipment.html">My Config and Equipment</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="config-and-equipment.html">My Config and Equipment</a>
+      </div>
     </nav>
 
     <section class="ascii-header">
@@ -24,6 +27,7 @@
         <p id="bio"></p>
       </div>
     </section>
+    <script src="script.js"></script>
     <script>
       const welcomeMessage = "Welcome to my portfolio:)\n\n";
       const asciiArt = `
