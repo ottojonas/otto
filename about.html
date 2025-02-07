@@ -30,16 +30,23 @@
     <script src="script.js"></script>
     <script>
       const welcomeMessage = "Welcome to my portfolio:)\n\n";
-      const asciiArt = `
-       ██████╗ ████████╗████████╗ ██████╗ 
-      ██╔═══██╗╚══██╔══╝╚══██╔══╝██╔═══██╗
-      ██║   ██║   ██║      ██║   ██║   ██║
-      ██║   ██║   ██║      ██║   ██║   ██║
-      ╚██████╔╝   ██║      ██║   ╚██████╔╝
-       ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ 
-      `;
-
-      const fullText = welcomeMessage + asciiArt;
+      const asciiArtDesktop = `
+        ██████╗ ████████╗████████╗ ██████╗
+       ██╔═══██╗╚══██╔══╝╚══██╔══╝██╔═══██╗
+       ██║   ██║   ██║      ██║   ██║   ██║
+       ██║   ██║   ██║      ██║   ██║   ██║
+       ╚██████╔╝   ██║      ██║   ╚██████╔╝
+        ╚═════╝    ╚═╝      ╚═╝    ╚═════╝
+       `;
+      const asciiArtMobile = `
+|__| .-------.
+|=.| |.-----.|
+|--| ||     ||
+|  | |'-----'|
+|__|~')_____('`;
+      const fullText =
+        welcomeMessage +
+        (window.innerWidth <= 768 ? asciiArtMobile : asciiArtDesktop);
       let i = 0;
       function typeFullText() {
         if (i < fullText.length) {
