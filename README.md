@@ -1,5 +1,4 @@
 # Portfolio website
 
 ## Video
-
-<video controls src="assets/screenrecording.mp4" title="screenrecording"></video>
+[![Watch the video](https://raw.githubusercontent.com/ottojonas/otto/main/assets/thumbnail.jpg)](https://raw.githubusercontent.com/ottojonas/otto/main/assets/screenrecording.mp4)
